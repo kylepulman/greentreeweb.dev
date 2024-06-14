@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>About &bull; Greentree Web Development</title>
+	<title>About Us &bull; Greentree Web Development</title>
 	<meta name="description" content="Business websites for home and outdoor services." />
 </svelte:head>
 

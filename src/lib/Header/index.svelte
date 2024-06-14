@@ -2,10 +2,10 @@
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { content } from '.';
 
-	export let isHomepage: boolean = false;
+	export let pageTitle: string | undefined;
 </script>
 
-<header class="px-4" class:sub-page={!isHomepage}>
+<header class="px-4" class:sub-page={pageTitle}>
 	<div class="page flex flex-col justify-between gap-4 py-8 lg:flex-row lg:items-center">
 		<h1 class="flex gap-2">
 			<img src="/favicon.svg" alt="Greentree Web Development logo" width="48" height="48" />
@@ -18,9 +18,9 @@
 		</nav>
 		<LightSwitch />
 	</div>
-	{#if !isHomepage}
+	{#if pageTitle}
 		<div class="flex h-64 items-center justify-center">
-			<h1 class="h1">About Us</h1>
+			<h1 class="h1">{pageTitle}</h1>
 		</div>
 	{/if}
 </header>

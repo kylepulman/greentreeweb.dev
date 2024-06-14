@@ -1,11 +1,27 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { Footer } from '$lib/Footer';
 	import { Header } from '$lib/Header';
 	import '../app.css';
+
+	let pageTitle: string | undefined = undefined;
+
+	$: {
+		if ($page.url.pathname === '/about') {
+			pageTitle = 'About Us';
+		} else if ($page.url.pathname === '/services') {
+			pageTitle = 'Our Services';
+		} else if ($page.url.pathname === '/portfolio') {
+			pageTitle = 'Our Portfolio';
+		} else if ($page.url.pathname === '/contact') {
+			pageTitle = 'Contact Us';
+		} else {
+			pageTitle = undefined;
+		}
+	}
 </script>
 
-<Header isHomepage={$page.url.pathname === '/'} />
+<Header {pageTitle} />
 <slot />
 <Footer
 	content={{

@@ -26,10 +26,6 @@ export const content: Header = {
 			action: '/portfolio'
 		},
 		{
-			label: 'Blog',
-			action: '/blog'
-		},
-		{
 			label: 'Contact',
 			action: '/contact'
 		}

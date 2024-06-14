@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Hero } from '$lib/Hero';
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
+	import { Hero } from '$lib/Hero';
 	import { Pitch } from '$lib/Pitch';
 	import { Profile } from '$lib/Profile';
+	import { Tiers } from '$lib/Tiers';
 </script>
 
 <svelte:head>
@@ -150,19 +151,21 @@
 			}
 		}}
 	/>
-	<Profile content={{
-		figcaption: {
-			heading: "Kyle P.",
-			detail: "Owner/Developer"
-		},
-		visual: {
-			source: "https://picsum.photos/500",
-			alternativeText: 'Profile photo.',
-			width:300,
-			height: 300
-		}
-	}}/>
-		<BlockHeader
+	<Profile
+		content={{
+			figcaption: {
+				heading: 'Kyle P.',
+				detail: 'Owner/Developer'
+			},
+			visual: {
+				source: 'https://picsum.photos/500',
+				alternativeText: 'Profile photo.',
+				width: 300,
+				height: 300
+			}
+		}}
+	/>
+	<BlockHeader
 		content={{
 			heading: 'Our Blog',
 			visual: {
@@ -175,8 +178,7 @@
 		content={[
 			{
 				heading: 'Are hand coded websites better than WordPress?',
-				detail:
-					'Learn the differences in speed and security between the two.',
+				detail: 'Learn the differences in speed and security between the two.',
 				visual: {
 					source: 'https://picsum.photos/400/200',
 					alternativeText: 'Decoration',
@@ -192,8 +194,7 @@
 			},
 			{
 				heading: 'How to add Dark Mode to a custom website',
-				detail:
-					'Learn how I create Dark Mode and why it matters for your site.',
+				detail: 'Learn how I create Dark Mode and why it matters for your site.',
 				visual: {
 					source: 'https://picsum.photos/400/200',
 					alternativeText: 'Decoration',
@@ -209,8 +210,7 @@
 			},
 			{
 				heading: 'How to build responsive websites from scratch',
-				detail:
-					'I talk about how I start each website to make it responsive.',
+				detail: 'I talk about how I start each website to make it responsive.',
 				visual: {
 					source: 'https://picsum.photos/400/200',
 					alternativeText: 'Decoration',
@@ -223,7 +223,83 @@
 						action: '#read-more'
 					}
 				]
+			}
+		]}
+	/>
+	<Tiers
+		content={[
+			{
+				type: 'E-Commerce',
+				heading: '$8K',
+				points: [
+					{
+						heading: '$8000 min up front cost'
+					},
+					{
+						heading: 'Custom designed'
+					},
+					{
+						heading: 'Custom coded Shopify integration'
+					},
+					{
+						heading: 'Easy to edit'
+					}
+				],
+				callsToAction: [
+					{
+						label: 'Contact Us',
+						action: 'tel:9103867339'
+					}
+				]
 			},
+			{
+				type: 'Standard',
+				heading: '$150/mo',
+				points: [
+					{
+						heading: 'Unlimited edits'
+					},
+					{
+						heading: 'Includes hosting'
+					},
+					{
+						heading: '24/7 customer service'
+					},
+					{
+						heading: 'Lifetime updates'
+					}
+				],
+				callsToAction: [
+					{
+						label: 'Contact Us',
+						action: 'tel:9103867339'
+					}
+				]
+			},
+			{
+				type: 'Logos & Graphic Design',
+				heading: '$0',
+				points: [
+					{
+						heading: '2 revisions'
+					},
+					{
+						heading: 'All file formats'
+					},
+					{
+						heading: 'Ready to use'
+					},
+					{
+						heading: 'FREE with subscription'
+					}
+				],
+				callsToAction: [
+					{
+						label: 'Contact Us',
+						action: 'tel:9103867339'
+					}
+				]
+			}
 		]}
 	/>
 </section>

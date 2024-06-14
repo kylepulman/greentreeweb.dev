@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
+	import { Contacts } from '$lib/Contacts';
 	import { Hero } from '$lib/Hero';
 </script>
 
@@ -63,6 +64,32 @@
 					width: 64,
 					height: 64
 				}
+			}
+		]}
+	/>
+	<Contacts
+		content={[
+			{
+				visual: {
+					source: '/favicon.svg',
+					alternativeText: 'decoration',
+					width: 64,
+					height: 64
+				},
+				heading: 'Phone:',
+				detail: '910-386-7339',
+				action: 'tel:9103867339'
+			},
+			{
+				visual: {
+					source: '/favicon.svg',
+					alternativeText: 'decoration',
+					width: 64,
+					height: 64
+				},
+				heading: 'Email:',
+				detail: 'kyle@greentreeweb.dev',
+				action: 'mail:kyle@greentreeweb.dev'
 			}
 		]}
 	/>

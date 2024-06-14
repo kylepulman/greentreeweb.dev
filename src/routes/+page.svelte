@@ -2,6 +2,7 @@
 	import { Hero } from '$lib/Hero';
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
+	import { Pitch } from '$lib/Pitch';
 </script>
 
 <svelte:head>
@@ -13,4 +14,5 @@
 	<Hero />
 	<BlockHeader />
 	<Cards />
+	<Pitch />
 </section>

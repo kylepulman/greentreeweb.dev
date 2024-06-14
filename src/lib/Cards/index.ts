@@ -1,4 +1,5 @@
-type Card = {
+export type Card = {
+	order?: 'variant-one';
 	heading: string;
 	detail: string;
 	callsToAction?: {
@@ -8,37 +9,9 @@ type Card = {
 	visual: {
 		source: string;
 		alternativeText: string;
+		width?: number;
+		height?: number;
 	};
 };
-
-export const content: Card[] = [
-	{
-		heading: 'Mobile-first Design',
-		detail:
-			'We start building your site for mobile devices first, then we add on to it to make tablet and desktop.',
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	},
-	{
-		heading: 'Fully Responsive',
-		detail:
-			'Your website will fit all mobile screens sizes, tablets, and desktop sizes so new clients can access your site from anywhere.',
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	},
-	{
-		heading: 'Optimization',
-		detail:
-			'60% of all internet traffic is on mobile devices, so we optimize your mobile to perform their best in search engines.',
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	}
-];
 
 export { default as Cards } from './index.svelte';

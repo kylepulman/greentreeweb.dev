@@ -34,6 +34,6 @@ export const content: Header = {
 			action: '/contact'
 		}
 	]
-}
+};
 
 export { default as Header } from './index.svelte';

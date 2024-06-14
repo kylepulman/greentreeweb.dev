@@ -1,10 +1,11 @@
 <script>
+	import { page } from '$app/stores';
 	import { Footer } from '$lib/Footer';
 	import { Header } from '$lib/Header';
 	import '../app.css';
 </script>
 
-<Header />
+<Header isHomepage={$page.url.pathname === '/'}/>
 <slot />
 <Footer
 	content={{

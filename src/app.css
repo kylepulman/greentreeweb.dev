@@ -17,8 +17,6 @@
 	--theme-font-family-heading: 'Montserrat', sans-serif;
 }
 
-header.page,
-section.page,
-footer.page {
+.page {
 	@apply mx-auto max-w-screen-xl;
 }

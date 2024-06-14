@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Hero } from '$lib/Hero';
+	import { BlockHeader } from '$lib/BlockHeader';
+	import { Cards } from '$lib/Cards';
 </script>
 
 <svelte:head>
@@ -9,4 +11,6 @@
 
 <section class="page">
 	<Hero />
+	<BlockHeader />
+	<Cards />
 </section>

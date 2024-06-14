@@ -5,7 +5,7 @@
 	import '../app.css';
 </script>
 
-<Header isHomepage={$page.url.pathname === '/'}/>
+<Header isHomepage={$page.url.pathname === '/'} />
 <slot />
 <Footer
 	content={{

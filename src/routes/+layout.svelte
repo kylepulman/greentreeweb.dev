@@ -6,6 +6,30 @@
 
 	let pageTitle: string | undefined = undefined;
 
+	const title = 'Greentree Web\nDevelopment';
+	const navigation = [
+		{
+			label: 'Home',
+			action: '/'
+		},
+		{
+			label: 'About',
+			action: '/about'
+		},
+		{
+			label: 'Services',
+			action: '/services'
+		},
+		{
+			label: 'Portfolio',
+			action: '/portfolio'
+		},
+		{
+			label: 'Contact',
+			action: '/contact'
+		}
+	];
+
 	$: {
 		if ($page.url.pathname === '/about') {
 			pageTitle = 'About Us';
@@ -21,39 +45,24 @@
 	}
 </script>
 
-<Header {pageTitle} />
+<Header
+	content={{
+		title,
+		navigation,
+		pageTitle
+	}}
+/>
 <slot />
 <Footer
 	content={{
-		title: 'Greentree Web Development',
+		title,
 		email: 'kyle@greentreeweb.dev',
 		phone: '910-386-7339',
 		navigation: {
 			header: {
 				heading: 'Navigation'
 			},
-			items: [
-				{
-					label: 'Home',
-					action: '/'
-				},
-				{
-					label: 'About',
-					action: '/about'
-				},
-				{
-					label: 'Services',
-					action: '/services'
-				},
-				{
-					label: 'Portfolio',
-					action: '/portfolio'
-				},
-				{
-					label: 'Contact',
-					action: '/contact'
-				}
-			]
+			items: navigation
 		},
 		services: {
 			header: {

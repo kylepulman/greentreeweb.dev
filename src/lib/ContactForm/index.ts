@@ -18,4 +18,34 @@ export type ContactFormShape = {
 	};
 };
 
+export const contactFormContent: ContactFormShape = {
+	heading: 'Drop Us a Line',
+	input: {
+		name: {
+			name: 'name',
+			type: 'text',
+			label: 'Your name',
+			placeholder: 'Kyle P.',
+			isRequired: true
+		},
+		email: {
+			name: 'email',
+			type: 'email',
+			label: 'Your email address',
+			placeholder: 'kyle@greentreeweb.dev',
+			isRequired: true
+		},
+		message: {
+			name: 'message',
+			type: 'textarea',
+			label: 'Your message',
+			placeholder: '',
+			isRequired: true
+		}
+	},
+	submit: {
+		label: 'Send'
+	}
+};
+
 export { default as ContactForm } from './index.svelte';

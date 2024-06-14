@@ -6,14 +6,16 @@
 </script>
 
 <footer class="page my-8 space-y-4 px-4">
-	<div class="mx-auto flex max-w-64 flex-col justify-between gap-4 lg:flex-row">
-		<div class="flex flex-col items-center space-y-2 text-center">
-			<h3 class="h3">{content.title}</h3>
+	<div class="flex flex-col gap-4 lg:flex-row">
+		<div
+			class="flex flex-1 flex-col items-center space-y-2 text-center lg:items-start lg:text-left"
+		>
+			<h3 class="h2">{content.title}</h3>
 			<p>{content.email}</p>
 			<p>{content.phone}</p>
 			<LightSwitch />
 		</div>
-		<nav class="list-nav space-y-2">
+		<nav class="card list-nav mx-auto w-full space-y-2 p-4 sm:min-w-60 sm:max-w-60">
 			<h3 class="h3">{content.navigation.header.heading}</h3>
 			<ul>
 				{#each content.navigation.items as location}
@@ -26,7 +28,7 @@
 				{/each}
 			</ul>
 		</nav>
-		<div class="list space-y-2">
+		<div class="card list mx-auto w-full space-y-2 p-4 sm:min-w-60 sm:max-w-60">
 			<h3 class="h3">{content.services.header.heading}</h3>
 			<ul class="space-y-2">
 				{#each content.services.items as item}

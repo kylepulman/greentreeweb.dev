@@ -1,35 +1,10 @@
-type Header = {
+export type HeaderShape = {
 	title: string;
 	navigation: {
 		label: string;
 		action: string;
 	}[];
-};
-
-export const content: Header = {
-	title: 'Greentree Web\nDevelopment',
-	navigation: [
-		{
-			label: 'Home',
-			action: '/'
-		},
-		{
-			label: 'About',
-			action: '/about'
-		},
-		{
-			label: 'Services',
-			action: '/services'
-		},
-		{
-			label: 'Portfolio',
-			action: '/portfolio'
-		},
-		{
-			label: 'Contact',
-			action: '/contact'
-		}
-	]
+	pageTitle?: string;
 };
 
 export { default as Header } from './index.svelte';

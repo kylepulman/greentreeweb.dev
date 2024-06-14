@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
-	import { ContactForm } from '$lib/ContactForm';
-	import { Contacts } from '$lib/Contacts';
+	import { ContactForm, contactFormContent } from '$lib/ContactForm';
+	import { Contacts, contactsContent } from '$lib/Contacts';
 	import { Hero } from '$lib/Hero';
 </script>
 
@@ -68,61 +68,6 @@
 			}
 		]}
 	/>
-	<Contacts
-		content={[
-			{
-				visual: {
-					source: '/favicon.svg',
-					alternativeText: 'decoration',
-					width: 64,
-					height: 64
-				},
-				heading: 'Phone:',
-				detail: '910-386-7339',
-				action: 'tel:9103867339'
-			},
-			{
-				visual: {
-					source: '/favicon.svg',
-					alternativeText: 'decoration',
-					width: 64,
-					height: 64
-				},
-				heading: 'Email:',
-				detail: 'kyle@greentreeweb.dev',
-				action: 'mail:kyle@greentreeweb.dev'
-			}
-		]}
-	/>
-	<ContactForm
-		content={{
-			heading: 'Drop Us a Line',
-			input: {
-				name: {
-					name: 'name',
-					type: 'text',
-					label: 'Your name',
-					placeholder: 'Kyle P.',
-					isRequired: true
-				},
-				email: {
-					name: 'email',
-					type: 'email',
-					label: 'Your email address',
-					placeholder: 'kyle@greentreeweb.dev',
-					isRequired: true
-				},
-				message: {
-					name: 'message',
-					type: 'textarea',
-					label: 'Your message',
-					placeholder: '',
-					isRequired: true
-				}
-			},
-			submit: {
-				label: 'Send'
-			}
-		}}
-	/>
+	<Contacts content={contactsContent} />
+	<ContactForm content={contactFormContent} />
 </section>

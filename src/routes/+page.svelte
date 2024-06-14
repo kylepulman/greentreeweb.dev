@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { BlockHeader } from '$lib/BlockHeader';
-	import { Cards } from '$lib/Cards';
+	import { Cards, portfolioContent } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
 	import { Profile } from '$lib/Profile';
-	import { Tiers } from '$lib/Tiers';
+	import { Tiers, tierContent } from '$lib/Tiers';
 </script>
 
 <svelte:head>
@@ -135,62 +135,7 @@
 			}
 		}}
 	/>
-	<Cards
-		content={[
-			{
-				order: 'variant-one',
-				heading: 'Valley Construction - Seattle, WA',
-				detail:
-					'Valley Construction Supply is the largest privately held construction supply company in Seattle, WA for over 35 years.',
-				visual: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Visit Valley Construction',
-						action: '#valley'
-					}
-				]
-			},
-			{
-				heading: "AB's Hillbilly Gyros - Oak Harbor, WA",
-				detail:
-					"AB's Hillbilly Gyros is a local fusion gyros restaurant that opened in 2018, we made their first website.",
-				visual: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Visit Hillbilly Gyros',
-						action: '#gyros'
-					}
-				]
-			},
-			{
-				heading: 'Dr. Victoria Chan - Foster City, CA',
-				detail:
-					'Dr. Victoria Chan is a Naturopathic Doctor based in California who offers a holistic approach to mental health.',
-				visual: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Visit Dr. Victoria',
-						action: '#dr'
-					}
-				]
-			}
-		]}
-	/>
+	<Cards content={portfolioContent} />
 	<BlockHeader
 		content={{
 			heading: 'Who We Are',
@@ -283,80 +228,5 @@
 			}
 		]}
 	/>
-	<Tiers
-		content={[
-			{
-				type: 'E-Commerce',
-				heading: '$8K',
-				points: [
-					{
-						heading: '$8000 min up front cost'
-					},
-					{
-						heading: 'Custom designed'
-					},
-					{
-						heading: 'Custom coded Shopify integration'
-					},
-					{
-						heading: 'Easy to edit'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				type: 'Standard',
-				heading: '$150/mo',
-				points: [
-					{
-						heading: 'Unlimited edits'
-					},
-					{
-						heading: 'Includes hosting'
-					},
-					{
-						heading: '24/7 customer service'
-					},
-					{
-						heading: 'Lifetime updates'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				type: 'Logos & Graphic Design',
-				heading: '$0',
-				points: [
-					{
-						heading: '2 revisions'
-					},
-					{
-						heading: 'All file formats'
-					},
-					{
-						heading: 'Ready to use'
-					},
-					{
-						heading: 'FREE with subscription'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			}
-		]}
-	/>
+	<Tiers content={tierContent} />
 </section>

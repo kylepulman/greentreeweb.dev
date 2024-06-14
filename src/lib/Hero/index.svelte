@@ -3,8 +3,6 @@
 
 	export let content: HeroContent;
 	export let options: HeroOptions;
-
-	console.log(options.ratio);
 </script>
 
 <div

@@ -11,8 +11,14 @@
 	font-family: 'Montserrat Italic';
 	src: url('/fonts/montserrat-italic.ttf');
 }
-							
+
 :root [data-theme='wintry'] {
-  --theme-font-family-base: 'Montserrat', sans-serif;
-  --theme-font-family-heading: 'Montserrat', sans-serif;
+	--theme-font-family-base: 'Montserrat', sans-serif;
+	--theme-font-family-heading: 'Montserrat', sans-serif;
+}
+
+header.page,
+section.page,
+footer.page {
+	@apply mx-auto max-w-screen-xl;
 }

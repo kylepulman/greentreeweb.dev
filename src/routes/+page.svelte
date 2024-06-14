@@ -3,6 +3,7 @@
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
 	import { Pitch } from '$lib/Pitch';
+	import { Profile } from '$lib/Profile';
 </script>
 
 <svelte:head>
@@ -130,6 +131,99 @@
 					}
 				]
 			}
+		]}
+	/>
+	<BlockHeader
+		content={{
+			heading: 'Who We Are',
+			detail:
+				'My name is Ryan, I am a stay at home dad and web developer. I started this business to help provide for the family while still being able to be home and raise the kids. I spent a year and a half teaching myself the right way to make websites and learning to write the code myself. Now after being in business professionally for over 5 years I have built hundreds websites and have my method down to a science.',
+			callsToAction: [
+				{
+					label: 'Learn More',
+					action: '/about'
+				}
+			],
+			visual: {
+				source: '/favicon.svg',
+				alternativeText: 'Decoration'
+			}
+		}}
+	/>
+	<Profile content={{
+		figcaption: {
+			heading: "Kyle P.",
+			detail: "Owner/Developer"
+		},
+		visual: {
+			source: "https://picsum.photos/500",
+			alternativeText: 'Profile photo.',
+			width:300,
+			height: 300
+		}
+	}}/>
+		<BlockHeader
+		content={{
+			heading: 'Our Blog',
+			visual: {
+				source: '/favicon.svg',
+				alternativeText: 'Decoration'
+			}
+		}}
+	/>
+	<Cards
+		content={[
+			{
+				heading: 'Are hand coded websites better than WordPress?',
+				detail:
+					'Learn the differences in speed and security between the two.',
+				visual: {
+					source: 'https://picsum.photos/400/200',
+					alternativeText: 'Decoration',
+					width: 400,
+					height: 200
+				},
+				callsToAction: [
+					{
+						label: 'Read More',
+						action: '#read-more'
+					}
+				]
+			},
+			{
+				heading: 'How to add Dark Mode to a custom website',
+				detail:
+					'Learn how I create Dark Mode and why it matters for your site.',
+				visual: {
+					source: 'https://picsum.photos/400/200',
+					alternativeText: 'Decoration',
+					width: 400,
+					height: 200
+				},
+				callsToAction: [
+					{
+						label: 'Read More',
+						action: '#read-more'
+					}
+				]
+			},
+			{
+				heading: 'How to build responsive websites from scratch',
+				detail:
+					'I talk about how I start each website to make it responsive.',
+				visual: {
+					source: 'https://picsum.photos/400/200',
+					alternativeText: 'Decoration',
+					width: 400,
+					height: 200
+				},
+				callsToAction: [
+					{
+						label: 'Read More',
+						action: '#read-more'
+					}
+				]
+			},
 		]}
 	/>
 </section>

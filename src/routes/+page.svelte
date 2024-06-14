@@ -2,7 +2,6 @@
 	import { BlockHeader } from '$lib/BlockHeader';
 	import { Cards } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
-	import { Pitch } from '$lib/Pitch';
 	import { Profile } from '$lib/Profile';
 	import { Tiers } from '$lib/Tiers';
 </script>
@@ -14,6 +13,7 @@
 
 <section class="page">
 	<Hero
+		options={{ ratio: [2, 3] }}
 		content={{
 			heading: 'No-nonsense website development for your business.',
 			detail: 'Business websites for home and outdoor services.',
@@ -85,18 +85,19 @@
 			}
 		]}
 	/>
-	<Pitch
+	<Hero
+		options={{ reversed: true }}
 		content={{
 			heading: '$0 Down, $150 Per Month,\n12 Month Minimum Contract',
 			detail:
 				'$0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved.\n\nYou own your domain, content, listing, and profiles. Cancel anytime with no fees or hassle.',
 			visual: {
-				source: 'https://picsum.photos/500',
+				source: 'https://picsum.photos/500/900',
 				alternativeText: 'A placeholder photo.',
 				width: 500,
-				height: 500
+				height: 900
 			},
-			points: [
+			list: [
 				{
 					heading: 'Hosting Fees Included',
 					detail: 'Hosting fees are built right into the monthly payment.'

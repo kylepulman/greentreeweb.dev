@@ -13,8 +13,8 @@
 
 <section class="page">
 	<Hero
+		options={{ reversed: true, ratio: [1, 2] }}
 		content={{
-			reversed: true,
 			subheading: 'Greentree Web Development',
 			heading: 'Giving Small Businesses The Big Business Treatment',
 			detail:

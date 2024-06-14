@@ -1,13 +1,21 @@
-export type HeroShape = {
+export type HeroOptions = {
 	reversed?: boolean;
+	ratio?: number[];
+};
+
+export type HeroContent = {
 	subheading?: string;
 	heading: string;
-	detail: string;
+	detail?: string;
 	callsToAction?: {
 		label: string;
 		action: string;
 	}[];
-	visual: {
+	list?: {
+		heading: string;
+		detail?: string;
+	}[];
+	visual?: {
 		source: string;
 		alternativeText: string;
 		width: number;

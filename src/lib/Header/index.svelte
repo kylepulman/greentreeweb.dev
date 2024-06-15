@@ -27,8 +27,7 @@
 
 <style>
 	header.sub-page {
-		background: linear-gradient(hsl(0 0% 0% / 0.5), hsl(0 0% 0% / 0.5)),
-			url('https://picsum.photos/id/788/1920/1080');
+		background: linear-gradient(hsl(0 0% 0% / 0.5), hsl(0 0% 0% / 0.5)), url('https://picsum.photos/id/788/1920/1080');
 		background-size: cover;
 		background-position: center bottom;
 		background-attachment: fixed;

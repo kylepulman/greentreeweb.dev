@@ -4,9 +4,7 @@
 	export let content: Tier[];
 </script>
 
-<div
-	class="page my-8 flex flex-col items-center justify-center gap-8 px-4 md:flex-row md:items-stretch"
->
+<div class="page my-8 flex flex-col items-center justify-center gap-8 px-4 md:flex-row md:items-stretch">
 	{#each content as card}
 		<article
 			class="card flex w-full max-w-80 flex-col items-center justify-between space-y-4 p-4 text-center transition-transform
@@ -16,12 +14,7 @@
 		>
 			<h3>{card.type}</h3>
 			{#if card.visual}
-				<img
-					src={card.visual.source}
-					alt={card.visual.alternativeText}
-					width={card.visual.width}
-					height={card.visual.height}
-				/>
+				<img src={card.visual.source} alt={card.visual.alternativeText} width={card.visual.width} height={card.visual.height} />
 			{/if}
 			<h2 class="h1 flex gap-2">
 				{card.heading}
@@ -40,10 +33,7 @@
 			{#if card.callsToAction}
 				<nav class="flex flex-wrap items-center gap-4">
 					{#each card.callsToAction as location}
-						<a
-							class="variant-filled btn first-of-type:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary"
-							href={location.action}>{location.label}</a
-						>
+						<a class="variant-filled btn first-of-type:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary" href={location.action}>{location.label}</a>
 					{/each}
 				</nav>
 			{/if}

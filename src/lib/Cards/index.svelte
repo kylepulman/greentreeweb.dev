@@ -8,15 +8,8 @@
 	<slot name="header" />
 	<div class="flex flex-col items-center gap-4 md:flex-row md:items-stretch">
 		{#each content as card}
-			<article
-				class="card variant-ghost-surface mx-auto flex max-w-prose flex-1 flex-col items-center justify-between space-y-4 p-4 text-center"
-			>
-				<img
-					src={card.visual.source}
-					alt={card.visual.alternativeText}
-					width={card.visual.width}
-					height={card.visual.height}
-				/>
+			<article class="card variant-ghost-surface mx-auto flex max-w-prose flex-1 flex-col items-center justify-between space-y-4 p-4 text-center">
+				<img src={card.visual.source} alt={card.visual.alternativeText} width={card.visual.width} height={card.visual.height} />
 				<h2 class="h3 flex gap-2">
 					{card.heading}
 				</h2>
@@ -24,10 +17,7 @@
 				{#if card.callsToAction}
 					<nav class="flex flex-wrap items-center gap-4">
 						{#each card.callsToAction as location}
-							<a
-								class="variant-filled btn first-of-type:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary"
-								href={location.action}>{location.label}</a
-							>
+							<a class="variant-filled btn first-of-type:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary" href={location.action}>{location.label}</a>
 						{/each}
 					</nav>
 				{/if}

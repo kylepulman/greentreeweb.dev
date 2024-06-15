@@ -7,9 +7,7 @@
 
 <footer class="page my-8 space-y-4 px-4">
 	<div class="flex flex-col gap-4 md:flex-row">
-		<div
-			class="flex flex-1 flex-col items-center space-y-2 text-center md:items-start md:text-left"
-		>
+		<div class="flex flex-1 flex-col items-center space-y-2 text-center md:items-start md:text-left">
 			<h3 class="h2">{content.title}</h3>
 			<p>{content.email}</p>
 			<p>{content.phone}</p>

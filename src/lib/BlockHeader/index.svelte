@@ -8,12 +8,7 @@
 	<article class="mx-auto flex max-w-prose flex-col items-center space-y-4 text-center">
 		<h2 class="h2 flex gap-2">{content.heading}</h2>
 		{#if content.visual}
-			<img
-				src={content.visual.source}
-				alt={content.visual.alternativeText}
-				width="36"
-				height="36"
-			/>
+			<img src={content.visual.source} alt={content.visual.alternativeText} width="36" height="36" />
 		{/if}
 		{#if content.detail}
 			<p>{content.detail}</p>

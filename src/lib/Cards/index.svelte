@@ -4,7 +4,7 @@
 	export let content: Card[];
 </script>
 
-<div class="page my-8 flex flex-col items-center gap-4 px-4 lg:flex-row lg:items-stretch">
+<div class="page flex flex-col items-center gap-4 lg:flex-row lg:items-stretch">
 	{#each content as card}
 		<article
 			class="card variant-ghost-surface mx-auto flex max-w-prose flex-1 flex-col items-center justify-between space-y-4 p-4 text-center"

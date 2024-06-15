@@ -5,11 +5,14 @@
 </script>
 
 <div
-	class="page my-8 flex flex-col items-center justify-center gap-4 px-4 lg:flex-row lg:items-stretch"
+	class="page my-8 flex flex-col items-center justify-center gap-8 px-4 lg:flex-row lg:items-stretch"
 >
 	{#each content as card}
 		<article
-			class="card variant-ghost-primary flex w-full max-w-80 flex-col items-center justify-between space-y-4 p-4 text-center"
+			class="card flex w-full max-w-80 flex-col items-center justify-between space-y-4 p-4 text-center transition-transform
+						 [&:nth-of-type(1)]:variant-ghost-primary [&:nth-of-type(2)]:variant-ghost-surface [&:nth-of-type(3)]:variant-ghost-surface [&:nth-of-type(1)]:order-1
+						 [&:nth-of-type(1)]:scale-110 sm:[&:nth-of-type(1)]:order-2 [&:nth-of-type(2)]:order-2
+						 sm:[&:nth-of-type(2)]:order-1 [&:nth-of-type(3)]:order-3"
 		>
 			<h3>{card.type}</h3>
 			{#if card.visual}

@@ -4,7 +4,7 @@
 	export let content: BlockHeaderShape;
 </script>
 
-<div class="page my-8">
+<section class="page">
 	<article class="mx-auto flex max-w-prose flex-col items-center space-y-4 px-4 text-center">
 		<h2 class="h2 flex gap-2">{content.heading}</h2>
 		{#if content.visual}
@@ -33,4 +33,4 @@
 			</nav>
 		{/if}
 	</article>
-</div>
+</section>

@@ -52,7 +52,9 @@
 		pageTitle
 	}}
 />
-<slot />
+<main class="flex-1 space-y-16">
+	<slot />
+</main>
 <Footer
 	content={{
 		title,

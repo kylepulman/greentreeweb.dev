@@ -20,30 +20,6 @@ export type Tier = {
 
 export const tierContent: Tier[] = [
 	{
-		type: 'E-Commerce',
-		heading: '$8K',
-		points: [
-			{
-				heading: '$8000 min up front cost'
-			},
-			{
-				heading: 'Custom designed'
-			},
-			{
-				heading: 'Custom coded Shopify integration'
-			},
-			{
-				heading: 'Easy to edit'
-			}
-		],
-		callsToAction: [
-			{
-				label: 'Contact Us',
-				action: 'tel:9103867339'
-			}
-		]
-	},
-	{
 		type: 'Standard',
 		heading: '$150/mo',
 		points: [
@@ -58,6 +34,30 @@ export const tierContent: Tier[] = [
 			},
 			{
 				heading: 'Lifetime updates'
+			}
+		],
+		callsToAction: [
+			{
+				label: 'Contact Us',
+				action: 'tel:9103867339'
+			}
+		]
+	},
+	{
+		type: 'E-Commerce',
+		heading: '$8K',
+		points: [
+			{
+				heading: '$8000 min up front cost'
+			},
+			{
+				heading: 'Custom designed'
+			},
+			{
+				heading: 'Custom coded Shopify integration'
+			},
+			{
+				heading: 'Easy to edit'
 			}
 		],
 		callsToAction: [

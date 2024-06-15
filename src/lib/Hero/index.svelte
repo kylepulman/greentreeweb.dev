@@ -5,8 +5,8 @@
 	export let options: HeroOptions;
 </script>
 
-<div
-	class="page my-8 flex flex-col justify-between gap-8 px-4 lg:items-center {options.reversed
+<section
+	class="page my-8 flex flex-col justify-between gap-8 lg:items-center {options.reversed
 		? 'lg:flex-row-reverse'
 		: 'lg:flex-row'}"
 >
@@ -51,4 +51,4 @@
 			/>
 		</figure>
 	{/if}
-</div>
+</section>

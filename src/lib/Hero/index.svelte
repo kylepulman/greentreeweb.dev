@@ -7,8 +7,8 @@
 
 <section
 	class="page my-8 flex flex-col justify-between gap-4 {options.reversed
-		? 'lg:flex-row-reverse'
-		: 'lg:flex-row'}"
+		? 'md:flex-row-reverse'
+		: 'md:flex-row'}"
 >
 	<article class="space-y-4 self-center {options.layout?.article?.flex ?? 'flex-1'}">
 		{#if content.subheading}

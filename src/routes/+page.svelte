@@ -30,23 +30,6 @@
 		}
 	}}
 />
-<BlockHeader
-	content={{
-		heading: 'What We Do',
-		detail:
-			'We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.',
-		callsToAction: [
-			{
-				label: 'Learn More',
-				action: '/about'
-			}
-		],
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	}}
-/>
 <Cards
 	content={[
 		{
@@ -83,7 +66,26 @@
 			}
 		}
 	]}
-/>
+>
+	<BlockHeader
+		slot="header"
+		content={{
+			heading: 'What We Do',
+			detail:
+				'We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.',
+			callsToAction: [
+				{
+					label: 'Learn More',
+					action: '/about'
+				}
+			],
+			visual: {
+				source: '/favicon.svg',
+				alternativeText: 'Decoration'
+			}
+		}}
+	/>
+</Cards>
 <Hero
 	options={{
 		reversed: true,
@@ -137,17 +139,20 @@
 		}
 	}}
 />
-<BlockHeader
-	content={{
-		heading: 'Our Portfolio',
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	}}
-/>
-<Cards content={portfolioContent} />
-<BlockHeader
+<Cards content={portfolioContent}>
+	<BlockHeader
+		slot="header"
+		content={{
+			heading: 'Our Portfolio',
+			visual: {
+				source: '/favicon.svg',
+				alternativeText: 'Decoration'
+			}
+		}}
+	/>
+</Cards>
+<Profile
+	options={{}}
 	content={{
 		heading: 'Who We Are',
 		detail:
@@ -158,14 +163,6 @@
 				action: '/about'
 			}
 		],
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
-		}
-	}}
-/>
-<Profile
-	content={{
 		figcaption: {
 			heading: 'Kyle P.',
 			detail: 'Owner/Developer'
@@ -175,15 +172,6 @@
 			alternativeText: 'Profile photo.',
 			width: 300,
 			height: 300
-		}
-	}}
-/>
-<BlockHeader
-	content={{
-		heading: 'Our Blog',
-		visual: {
-			source: '/favicon.svg',
-			alternativeText: 'Decoration'
 		}
 	}}
 />
@@ -238,5 +226,16 @@
 			]
 		}
 	]}
-/>
+>
+	<BlockHeader
+		slot="header"
+		content={{
+			heading: 'Our Blog',
+			visual: {
+				source: '/favicon.svg',
+				alternativeText: 'Decoration'
+			}
+		}}
+	/>
+</Cards>
 <Tiers content={tierContent} />

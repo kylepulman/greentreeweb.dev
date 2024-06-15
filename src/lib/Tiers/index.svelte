@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="page my-8 flex flex-col items-center justify-center gap-8 px-4 lg:flex-row lg:items-stretch"
+	class="page my-8 flex flex-col items-center justify-center gap-8 px-4 md:flex-row md:items-stretch"
 >
 	{#each content as card}
 		<article

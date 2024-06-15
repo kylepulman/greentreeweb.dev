@@ -15,7 +15,7 @@
 	options={{}}
 	content={{
 		heading: 'No-nonsense website development for your business.',
-		detail: 'Business websites for home and outdoor services.',
+		detail: ['Business websites for home and outdoor services.'],
 		callsToAction: [
 			{
 				label: 'Get in Touch!',
@@ -85,17 +85,23 @@
 	]}
 />
 <Hero
-	options={{ reversed: true }}
+	options={{
+		reversed: true,
+		layout: {
+			article: { flex: 'flex-2' }
+		}
+	}}
 	content={{
+		subheading: 'No-nonsense contract',
 		heading: '$0 Down, $150 Per Month,\n12 Month Minimum Contract',
-		detail:
-			'$0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved.\n\nYou own your domain, content, listing, and profiles. Cancel anytime with no fees or hassle.',
-		visual: {
-			source: 'https://picsum.photos/500/900',
-			alternativeText: 'A placeholder photo.',
-			width: 500,
-			height: 900
-		},
+		detail: [
+			'$0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved.',
+			'You own your domain, content, listing, and profiles. Cancel anytime with no fees or hassle.'
+		],
+		callsToAction: [
+			{ label: 'Call Us', action: 'tel:3867339' },
+			{ label: 'Learn More', action: '#' }
+		],
 		list: [
 			{
 				heading: 'Hosting Fees Included',
@@ -122,7 +128,13 @@
 				heading: 'Google Analytics',
 				detail: 'We install Analytics for free to monitor traffic and where it comes from.'
 			}
-		]
+		],
+		visual: {
+			source: 'https://picsum.photos/900',
+			alternativeText: 'A placeholder photo.',
+			width: 900,
+			height: 900
+		}
 	}}
 />
 <BlockHeader

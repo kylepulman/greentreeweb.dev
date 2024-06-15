@@ -6,7 +6,7 @@
 </script>
 
 <header class="px-4" class:sub-page={content.pageTitle}>
-	<div class="flex flex-col items-center gap-4 py-8 lg:flex-row">
+	<div class="page flex flex-col items-center gap-4 py-8 lg:flex-row">
 		<h1 class="flex flex-1 gap-2">
 			<img src="/favicon.svg" alt="Greentree Web Development logo" width="48" height="48" />
 			<span class="h2 whitespace-pre-wrap">{content.title}</span>

@@ -10,7 +10,11 @@ const config = {
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
-		extend: {}
+		extend: {
+			flex: {
+				'2': '2 2 0%'
+			}
+		}
 	},
 	plugins: [
 		forms,

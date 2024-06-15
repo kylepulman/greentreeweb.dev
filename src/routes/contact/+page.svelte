@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { ContactForm, contactFormContent } from '$lib/ContactForm';
-	import { Contacts, contactsContent } from '$lib/Contacts';
+	import { Contact, contactContent } from '$lib/Contact';
 </script>
 
-<section class="page my-8 px-4">
-	<Contacts content={contactsContent} />
-	<ContactForm content={contactFormContent} />
-</section>
+<svelte:head>
+	<title>Contact Us &bull; Greentree Web Development</title>
+	<meta name="description" content="Business websites for home and outdoor services." />
+</svelte:head>
+
+<Contact content={contactContent} />

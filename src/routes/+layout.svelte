@@ -52,7 +52,7 @@
 		pageTitle
 	}}
 />
-<main class="flex-1 space-y-16">
+<main class="my-4 flex-1 space-y-16">
 	<slot />
 </main>
 <Footer

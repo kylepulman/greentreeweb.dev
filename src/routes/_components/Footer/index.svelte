@@ -26,17 +26,6 @@
 				{/each}
 			</ul>
 		</nav>
-		<div class="card list mx-auto w-full space-y-2 p-4 sm:min-w-60 sm:max-w-60">
-			<h3 class="h3">{content.services.header.heading}</h3>
-			<ul class="space-y-2">
-				{#each content.services.items as item}
-					<li>
-						<span><img src="/favicon.svg" alt="A list item." width="16" height="16" /></span>
-						<span class="flex-auto">{item.heading}</span>
-					</li>
-				{/each}
-			</ul>
-		</div>
 	</div>
 	<div class="text-center">
 		<small>Copyright &copy; {content.year} &bull; {content.title}</small>

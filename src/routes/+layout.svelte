@@ -1,93 +1,28 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Footer } from '$lib/Footer';
-	import { Header } from '$lib/Header';
 	import '../app.css';
+	import { Footer } from './_components/Footer';
+	import { Head } from './_components/Head';
+	import { Header } from './_components/Header';
 
-	let pageTitle: string | undefined = undefined;
-
-	const title = 'Greentree Web\nDevelopment';
-	const navigation = [
-		{
-			label: 'Home',
-			action: '/'
-		},
-		{
-			label: 'About',
-			action: '/about'
-		},
-		{
-			label: 'Services',
-			action: '/services'
-		},
-		{
-			label: 'Portfolio',
-			action: '/portfolio'
-		},
-		{
-			label: 'Contact',
-			action: '/contact'
-		}
-	];
-
-	$: {
-		if ($page.url.pathname === '/about') {
-			pageTitle = 'About Us';
-		} else if ($page.url.pathname === '/services') {
-			pageTitle = 'Our Services';
-		} else if ($page.url.pathname === '/portfolio') {
-			pageTitle = 'Our Portfolio';
-		} else if ($page.url.pathname === '/contact') {
-			pageTitle = 'Contact Us';
-		} else {
-			pageTitle = undefined;
-		}
-	}
+	export let data;
 </script>
+
+<Head
+	content={{
+		title: $page.data?.page?.title ? `${$page.data.page.title} • ${data.global.title}` : data.global.title,
+		description: $page.data?.page?.description ?? data.global.description
+	}}
+/>
 
 <Header
 	content={{
-		title,
-		navigation,
-		pageTitle
+		title: data.global.title,
+		navigation: data.global.navigation.items,
+		pageTitle: $page.url.pathname !== '/' ? $page.data.page.title : undefined
 	}}
 />
 <main class="my-4 flex-1 space-y-16">
 	<slot />
 </main>
-<Footer
-	content={{
-		title,
-		email: 'kyle@greentreeweb.dev',
-		phone: '910-386-7339',
-		navigation: {
-			header: {
-				heading: 'Navigation'
-			},
-			items: navigation
-		},
-		services: {
-			header: {
-				heading: 'Services'
-			},
-			items: [
-				{
-					heading: 'Web Design'
-				},
-				{
-					heading: 'Website Maintenance'
-				},
-				{
-					heading: 'SEO Services'
-				},
-				{
-					heading: 'Content Creation'
-				},
-				{
-					heading: 'Logo Design'
-				}
-			]
-		},
-		year: new Date().getFullYear()
-	}}
-/>
+<Footer content={data.global} />

@@ -11,14 +11,6 @@ export type FooterShape = {
 			action: string;
 		}[];
 	};
-	services: {
-		header: {
-			heading: string;
-		};
-		items: {
-			heading: string;
-		}[];
-	};
 	year: number;
 };
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Cards, portfolioContent } from '$lib/Cards';
+	import { Cards, cardDefaultContent } from '$lib/Cards';
 </script>
 
 <svelte:head>
@@ -7,6 +7,4 @@
 	<meta name="description" content="Business websites for home and outdoor services." />
 </svelte:head>
 
-<section class="page">
-	<Cards content={portfolioContent} />
-</section>
+<Cards content={{ articles: cardDefaultContent.articles }} />

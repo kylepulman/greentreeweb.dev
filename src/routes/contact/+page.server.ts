@@ -1,7 +1,8 @@
 export const load = () => {
 	return {
 		page: {
-			title: 'About Us'
+			title: 'Contact Us',
+			description: 'Description for Contact page.'
 		}
 	};
 };

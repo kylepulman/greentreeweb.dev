@@ -1,29 +1,37 @@
 <script lang="ts">
-	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { LightSwitch, getDrawerStore } from '@skeletonlabs/skeleton';
 	import type { HeaderShape } from '.';
+	import Menu from '$lib/Icons/Menu.svelte';
 
 	export let content: HeaderShape;
+
+	const drawerStore = getDrawerStore();
 </script>
 
-<header class="px-4" class:sub-page={content.pageTitle}>
-	<div class="page flex flex-col items-center gap-4 py-8 md:flex-row">
-		<h1 class="flex flex-1 gap-2">
-			<img src="/favicon.svg" alt="Greentree Web Development logo" width="48" height="48" />
-			<span class="h2 whitespace-pre-wrap">{content.title}</span>
-		</h1>
-		<nav class="flex flex-wrap items-center justify-center gap-4">
-			{#each content.navigation as location}
-				<a href={location.action}>{location.label}</a>
-			{/each}
-		</nav>
-		<LightSwitch />
-	</div>
+<header class:sub-page={content.pageTitle}>
 	{#if content.pageTitle}
-		<div class="flex h-64 items-center justify-center">
+		<div class="flex h-48 items-center justify-center px-4">
 			<h1 class="h1">{content.pageTitle}</h1>
 		</div>
 	{/if}
 </header>
+
+<nav class="bg-surface-50-900-token sticky top-0 z-10 py-2 lg:py-4">
+	<div class="page flex flex-col items-center gap-2 md:gap-4 lg:flex-row">
+		<div class="flex w-full items-center justify-between gap-2">
+			<a class="flex items-center gap-2" href="/">
+				<img class="h-9 min-h-9 w-9 min-w-9" src="/favicon.svg" alt="Greentree Web Development logo" width="36" height="36" />
+				<span class="h4 leading-tight">{content.title}</span>
+			</a>
+			<div class="flex items-center gap-2">
+				<LightSwitch />
+				<button class="btn-icon" on:click={() => drawerStore.open()}>
+					<Menu />
+				</button>
+			</div>
+		</div>
+	</div>
+</nav>
 
 <style>
 	header.sub-page {

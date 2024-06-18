@@ -1,5 +1,6 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import type { ValidationError } from './Contact';
+import { sendMessage } from './nodemailer';
 
 export const handleFormInput = async (event: RequestEvent) => {
 	const formData = await event.request.formData();
@@ -23,6 +24,11 @@ export const handleFormInput = async (event: RequestEvent) => {
 			error
 		};
 	}
+
+	await sendMessage({
+		text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+		html: `Name: ${name}<br>Email: ${email}<br>Message: ${message}`
+	});
 
 	return {
 		success: 'Message sent successfully!'

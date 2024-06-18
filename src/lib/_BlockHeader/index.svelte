@@ -10,8 +10,8 @@
 		{#if content.heading}
 			<h2 class="h2">{content.heading}</h2>
 		{/if}
-		{#if content.image}
-			<Icon />
+		{#if content.icon}
+			<Icon source={content.icon} />
 		{/if}
 		{#if content.detail}
 			<div class="max-w-prose">

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { BlockHeader } from '$lib/_BlockHeader';
 	import { Icon } from '$lib/_Icon';
-	import { cardDefaultContent, type CardShape } from '.';
+	import { type CardShape } from '.';
 
-	export let content: CardShape = cardDefaultContent;
+	export let content: CardShape;
 </script>
 
 <section class="page space-y-8">
@@ -14,7 +14,9 @@
 		{#each content.articles as article}
 			<article class="card variant-ghost-surface flex w-full max-w-sm flex-1 flex-col items-center space-y-4 p-4 text-center lg:max-w-full">
 				{#if article.image}
-					<Icon />
+					<img src={article.image.source} alt={article.image.alternativeText} width={article.image.width} height={article.image.height} />
+				{:else if article.icon}
+					<Icon source={article.icon} />
 				{/if}
 				<h2 class="h2 flex gap-2">
 					{article.heading}

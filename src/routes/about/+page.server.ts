@@ -1,9 +1,7 @@
+import aboutContent from './about.content';
+
 export const load = () => {
-	return {
-		page: {
-			title: 'About Us'
-		}
-	};
+	return aboutContent;
 };
 
 export const actions = {

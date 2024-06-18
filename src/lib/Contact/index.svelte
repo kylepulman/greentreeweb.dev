@@ -2,17 +2,17 @@
 	import { enhance } from '$app/forms';
 	import { BlockHeader } from '$lib/_BlockHeader';
 	import { Chips } from '$lib/_Chips';
-	import { contactDefaultContent, type ContactShape } from '.';
+	import { type ContactShape } from '.';
 
-	export let content: ContactShape = contactDefaultContent;
+	export let content: ContactShape;
 </script>
 
 <section class="page space-y-8">
-	{#if content.header}
-		<BlockHeader content={content.header} />
+	{#if content.blockHeader}
+		<BlockHeader content={content.blockHeader} />
 	{/if}
 	<div class="flex flex-2 flex-col items-start gap-4 md:flex-row">
-		<Chips content={contactDefaultContent.chips} />
+		<Chips content={content.chips} />
 		<form class="card variant-ghost-surface w-full flex-1 space-y-4 p-4" method="post" use:enhance>
 			<label class="label" for={content.form.input.name.name}>
 				<span>{content.form.input.name.label}</span>

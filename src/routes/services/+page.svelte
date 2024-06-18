@@ -1,13 +1,8 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
-	import tierContent from '../_components/tierContent';
+	import tierContent from '$lib/content/tierContent';
 </script>
-
-<svelte:head>
-	<title>Our Services &bull; Greentree Web Development</title>
-	<meta name="description" content="Business websites for home and outdoor services." />
-</svelte:head>
 
 <Hero
 	content={{

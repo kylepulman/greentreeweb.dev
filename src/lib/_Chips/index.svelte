@@ -9,13 +9,7 @@
 	{#each content as chip}
 		<a href={chip.action} class="variant-soft chip flex-1 p-4 hover:variant-filled">
 			<span>
-				{#if chip.icon?.source && !chip.icon?.source.includes('.')}
-					{#await import(`../Icons/${chip.icon.source}.svelte`) then icon}
-						<svelte:component this={icon.default} />
-					{/await}
-				{:else}
-					<Icon source={chip.icon?.source} />
-				{/if}
+				<Icon source={chip.icon} />
 			</span>
 			<span class="text-base font-medium">
 				{chip.label}

@@ -6,6 +6,5 @@ Business websites for home and outdoor services.
 
 ## To-do
 
-- Sweep code
 - Contact form
 - Content

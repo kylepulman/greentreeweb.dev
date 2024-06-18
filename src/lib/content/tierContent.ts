@@ -1,4 +1,11 @@
+import type { CardShape } from '$lib/Cards';
+import globalContent from './globalContent';
+
 export default {
+	header: {
+		heading: "Let's Get Started",
+		icon: globalContent.icon
+	},
 	articles: [
 		{
 			subheading: 'Standard',
@@ -73,4 +80,4 @@ export default {
 			]
 		}
 	]
-};
+} satisfies CardShape;

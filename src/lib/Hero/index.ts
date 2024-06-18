@@ -1,4 +1,17 @@
+import type { ArticleShape } from '$lib/types';
+
 export { default as Hero } from './index.svelte';
+
+type FigureShape = {
+	source: string;
+	alternativeText?: string;
+	width?: number;
+	height?: number;
+	figcaption?: {
+		heading?: string;
+		detail?: string;
+	};
+};
 
 export type HeroOptions = {
 	isColReverse?: boolean;
@@ -9,21 +22,6 @@ export type HeroOptions = {
 };
 
 export type HeroShape = {
-	article: {
-		subheading?: string;
-		heading: string;
-		detail?: string[];
-		list?: { heading?: string; detail?: string }[];
-		callsToAction: { label: string; action: string }[];
-	};
-	figure: {
-		source: string;
-		alternativeText: string;
-		width: number;
-		height: number;
-		figcaption?: {
-			heading: string;
-			detail: string;
-		};
-	};
+	article: ArticleShape;
+	figure: FigureShape;
 };

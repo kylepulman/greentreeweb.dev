@@ -59,7 +59,7 @@
 </script>
 
 <section class="page flex flex-col gap-8 lg:flex-row lg:gap-4 xl:gap-8" class:flex-col-reverse={options.isColReverse} class:lg:flex-row-reverse={options.isRowReverse}>
-	<article class="flex-1 space-y-4 self-center" class:flex-2={options.grow === 'article'}>
+	<article class="max-w-prose flex-1 space-y-4 self-center" class:flex-2={options.grow === 'article'}>
 		{#if content.article.subheading}
 			<h3 class="text-primary-700-200-token">{content.article.subheading}</h3>
 		{/if}
@@ -88,13 +88,15 @@
 				{/each}
 			</ul>
 		{/if}
-		<nav class="flex flex-wrap gap-2">
-			{#each content.article.callsToAction as callToAction}
-				<a href={callToAction.action} class="variant-filled btn [&:nth-of-type(1)]:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary">
-					{callToAction.label}
-				</a>
-			{/each}
-		</nav>
+		{#if content.article.callsToAction}
+			<nav class="flex flex-wrap gap-2">
+				{#each content.article.callsToAction as callToAction}
+					<a href={callToAction.action} class="variant-filled btn [&:nth-of-type(1)]:variant-filled-primary [&:nth-of-type(2)]:variant-filled-secondary [&:nth-of-type(3)]:variant-filled-tertiary">
+						{callToAction.label}
+					</a>
+				{/each}
+			</nav>
+		{/if}
 	</article>
 	<div class="relative flex-1" class:self-center={options.isCover === false} class:flex-2={options.grow === 'figure'}>
 		<figure class="relative flex items-center justify-center" class:h-full={options.isCover}>

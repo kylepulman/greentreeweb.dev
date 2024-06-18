@@ -2,6 +2,8 @@
 	import { Cards } from '$lib/Cards';
 	import { Contact } from '$lib/Contact';
 	import { Hero } from '$lib/Hero';
+	import contactContent from '$lib/content/contactContent';
+	import globalContent from '$lib/content/globalContent';
 </script>
 
 <Hero
@@ -40,35 +42,20 @@
 			{
 				heading: 'No pre-written content',
 				detail: ['We write unique and engaging content around your company. Everyone is unique!'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'decoration',
-					width: 64,
-					height: 64
-				}
+				icon: globalContent.icon
 			},
 			{
 				heading: 'Unbeatable Customer Service',
 				detail: ['No automated systems - When you need help the lead developer answers your call.'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'decoration',
-					width: 64,
-					height: 64
-				}
+				icon: globalContent.icon
 			},
 			{
 				heading: 'No Limits On Design',
 				detail: ['We can edit the design to cater to your tastes. Everything is customizable!'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'decoration',
-					width: 64,
-					height: 64
-				}
+				icon: globalContent.icon
 			}
 		]
 	}}
 />
 
-<Contact />
+<Contact content={contactContent} />

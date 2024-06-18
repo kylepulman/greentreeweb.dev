@@ -18,7 +18,7 @@
 <Drawer>
 	<nav class="list-nav">
 		<ul class="p-4">
-			{#each data.global.navigation.items as item}
+			{#each data.globalContent.actions as item}
 				<li>
 					<a class={classesActive(item.action)} href={item.action} on:click={() => drawerStore.close()}>
 						<span class="text-base font-medium">
@@ -33,16 +33,16 @@
 
 <Head
 	content={{
-		title: $page.data?.page?.title ? `${$page.data.page.title} • ${data.global.title}` : data.global.title,
-		description: $page.data?.page?.description ?? data.global.description
+		title: $page.data?.page?.title ? `${$page.data.page.title} • ${data.globalContent.title}` : data.globalContent.title,
+		description: $page.data?.page?.description ?? data.globalContent.description
 	}}
 />
 
 <Header
 	content={{
-		title: data.global.title,
-		navigation: data.global.navigation.items,
-		pageTitle: $page.url.pathname !== '/' ? $page.data.page.title : undefined
+		icon: data.globalContent.icon,
+		title: data.globalContent.title,
+		pageTitle: $page.url.pathname !== '/' && $page.status === 200 ? $page.data.page.title : undefined
 	}}
 />
 
@@ -50,4 +50,4 @@
 	<slot />
 </main>
 
-<Footer content={data.global} />
+<Footer content={data.globalContent} />

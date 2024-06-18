@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
-	import tierContent from './_components/tierContent';
+	import globalContent from '$lib/content/globalContent';
+	import portfolioContent from '$lib/content/portfolioContent';
+	import tierContent from '$lib/content/tierContent';
 </script>
 
 <Hero
@@ -30,32 +32,18 @@
 			{
 				heading: 'Mobile-first Design',
 				detail: ['We start building your site for mobile devices first, then we add on to it to make tablet and desktop.'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'Decoration',
-					width: 48,
-					height: 48
-				}
+
+				icon: globalContent.icon
 			},
 			{
 				heading: 'Fully Responsive',
 				detail: ['Your website will fit all mobile screens sizes, tablets, and desktop sizes so new clients can access your site from anywhere.'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'Decoration',
-					width: 48,
-					height: 48
-				}
+				icon: globalContent.icon
 			},
 			{
 				heading: 'Optimization',
 				detail: ['60% of all internet traffic is on mobile devices, so we optimize your mobile to perform their best in search engines.'],
-				image: {
-					source: '/favicon.svg',
-					alternativeText: 'Decoration',
-					width: 48,
-					height: 48
-				}
+				icon: globalContent.icon
 			}
 		]
 	}}
@@ -69,7 +57,7 @@
 	}}
 />
 
-<Cards />
+<Cards content={portfolioContent} />
 
 <Hero
 	options={{ grow: 'article', isRounded: true }}
@@ -85,7 +73,7 @@
 			]
 		},
 		figure: {
-			source: '/2024-03-21-me.gif',
+			source: '/me.gif',
 			alternativeText: 'Profile photo.',
 			width: 900,
 			height: 900,

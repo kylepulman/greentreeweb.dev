@@ -2,7 +2,10 @@
 	import { enhance } from '$app/forms';
 	import { BlockHeader } from '$lib/_BlockHeader';
 	import { Chips } from '$lib/_Chips';
+	import { fade } from 'svelte/transition';
 	import { type ContactShape } from '.';
+
+	let sending: boolean = false;
 
 	export let content: ContactShape;
 </script>
@@ -14,9 +17,24 @@
 	<div class="flex flex-2 flex-col items-start gap-4 md:flex-row">
 		<Chips content={content.chips} />
 
-		<form class="card variant-ghost-surface w-full flex-1 space-y-4 p-4" method="post" use:enhance>
-			{#if content.formResult?.error}
-				<div class="card variant-ghost-error mx-auto w-fit p-4">
+		<form
+			class="card variant-ghost-surface w-full flex-1 space-y-4 p-4"
+			method="post"
+			use:enhance={() => {
+				sending = true;
+				return async ({ update }) => {
+					sending = false;
+					return await update();
+				};
+			}}
+		>
+			{#if sending}
+				<div class="card variant-ghost-surface mx-auto w-fit p-4" in:fade>
+					<p>Sending...</p>
+				</div>
+			{/if}
+			{#if content.formResult?.error && sending === false}
+				<div class="card variant-ghost-error mx-auto w-fit p-4" in:fade>
 					<ul class="list">
 						<p class="font-medium">Please address the following errors:</p>
 						{#each Object.values(content.formResult.error) as value}
@@ -28,8 +46,8 @@
 					</ul>
 				</div>
 			{/if}
-			{#if content.formResult?.success}
-				<div class="card variant-ghost-success mx-auto w-fit p-4">
+			{#if content.formResult?.success && sending === false}
+				<div class="card variant-ghost-success mx-auto w-fit p-4" in:fade>
 					<p>{content.formResult.success}</p>
 				</div>
 			{/if}

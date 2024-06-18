@@ -1,3 +1,5 @@
+import { handleFormInput } from '$lib';
+
 export const load = () => {
 	return {
 		page: {
@@ -8,11 +10,5 @@ export const load = () => {
 };
 
 export const actions = {
-	default: async ({ request }) => {
-		const formData = await request.formData();
-
-		for (const [key, value] of formData.entries()) {
-			console.log(key, value);
-		}
-	}
+	default: (event) => handleFormInput(event)
 };

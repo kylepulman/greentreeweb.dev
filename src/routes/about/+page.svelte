@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
-	import { Contact } from '$lib/Contact';
+	import { Contact, type ContactShape } from '$lib/Contact';
 	import { Hero } from '$lib/Hero';
 	import contactContent from '$lib/content/contactContent';
 	import globalContent from '$lib/content/globalContent';
+
+	export let form: ContactShape['formResult'];
 </script>
 
 <Hero
@@ -58,4 +60,4 @@
 	}}
 />
 
-<Contact content={contactContent} />
+<Contact content={{ ...contactContent, formResult: form }} />

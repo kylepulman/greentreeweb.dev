@@ -1,3 +1,4 @@
+import { handleFormInput } from '$lib';
 import aboutContent from './about.content';
 
 export const load = () => {
@@ -5,11 +6,5 @@ export const load = () => {
 };
 
 export const actions = {
-	default: async ({ request }) => {
-		const formData = await request.formData();
-
-		for (const [key, value] of formData.entries()) {
-			console.log(key, value);
-		}
-	}
+	default: (event) => handleFormInput(event)
 };

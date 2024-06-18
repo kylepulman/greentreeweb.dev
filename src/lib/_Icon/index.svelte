@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { SvelteComponent, onMount, type ComponentType } from 'svelte';
 
 	const FALLBACK = '/favicon.svg';
@@ -11,7 +12,7 @@
 
 	const fetchImage = async (source: string) => {
 		try {
-			const response = await fetch(`http://localhost:5173${source}`);
+			const response = await fetch(`${$page.url.origin}${source}`);
 			const blob = await response.blob();
 
 			return URL.createObjectURL(blob);

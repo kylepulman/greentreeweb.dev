@@ -18,8 +18,11 @@ type FormShape = {
 	};
 };
 
+export type ValidationError = { name: 'name' | 'email' | 'message'; message: string };
+
 export type ContactShape = {
 	blockHeader?: BlockHeaderShape;
 	chips: ChipsShape;
 	form: FormShape;
+	formResult?: { error?: { [index: string]: ValidationError }; success?: string };
 };

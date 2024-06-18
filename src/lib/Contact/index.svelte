@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { BlockHeader } from '$lib/_BlockHeader';
+	import { Chips } from '$lib/_Chips';
 	import { contactDefaultContent, type ContactShape } from '.';
 
 	export let content: ContactShape = contactDefaultContent;
@@ -11,19 +12,7 @@
 		<BlockHeader content={content.header} />
 	{/if}
 	<div class="flex flex-2 flex-col items-start gap-4 md:flex-row">
-		<div class="flex flex-1 flex-wrap justify-center gap-4">
-			{#each content.chips as chip}
-				<a href={chip.action} class="variant-soft chip flex-1 p-4 hover:variant-filled">
-					<span>
-						<img class="h-6 max-h-6 min-h-6 w-6 min-w-6 max-w-6" src="/favicon.svg" alt="A list item." width="24" height="24" />
-					</span>
-					<span class="text-base font-medium">
-						{chip.label}
-					</span>
-				</a>
-			{/each}
-		</div>
-
+		<Chips content={contactDefaultContent.chips} />
 		<form class="card variant-ghost-surface w-full flex-1 space-y-4 p-4" method="post" use:enhance>
 			<label class="label" for={content.form.input.name.name}>
 				<span>{content.form.input.name.label}</span>

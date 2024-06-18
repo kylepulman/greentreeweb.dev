@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
+	import tierContent from '../_components/tierContent';
 </script>
 
 <svelte:head>
@@ -37,16 +38,16 @@
 			detail: ['If someone tells you they can get you to the front page of Google in 3 months - RUN! Unless your website was featured by The New York Times it could take years to rank in the top of the search results.', 'We offer a number of the latest search engine optimization techniques for 2021:'],
 			list: [
 				{
-					detail: 'Keyword-Centered Content & Blogs'
+					heading: 'Keyword-Centered Content & Blogs'
 				},
 				{
-					detail: 'Mobile-First-Optimized for the Best Experience'
+					heading: 'Mobile-First-Optimized for the Best Experience'
 				},
 				{
-					detail: 'Clean & Organized Code Structure For Web Crawlers'
+					heading: 'Clean & Organized Code Structure For Web Crawlers'
 				},
 				{
-					detail: 'Fully Responsive For Mobile, Tablet, & Desktop'
+					heading: 'Fully Responsive For Mobile, Tablet, & Desktop'
 				}
 			],
 			callsToAction: [
@@ -118,81 +119,4 @@
 	}}
 />
 
-<Cards
-	content={{
-		articles: [
-			{
-				subheading: 'Standard',
-				heading: '$150/mo',
-				list: [
-					{
-						detail: 'Unlimited edits'
-					},
-					{
-						detail: 'Includes hosting'
-					},
-					{
-						detail: '24/7 customer service'
-					},
-					{
-						detail: 'Lifetime updates'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				subheading: 'E-Commerce',
-				heading: '$8K',
-				list: [
-					{
-						detail: '$8000 min up front cost'
-					},
-					{
-						detail: 'Custom designed'
-					},
-					{
-						detail: 'Custom coded Shopify integration'
-					},
-					{
-						detail: 'Easy to edit'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				subheading: 'Logos & Graphic Design',
-				heading: '$0',
-				list: [
-					{
-						detail: '2 revisions'
-					},
-					{
-						detail: 'All file formats'
-					},
-					{
-						detail: 'Ready to use'
-					},
-					{
-						detail: 'FREE with subscription'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			}
-		]
-	}}
-/>
+<Cards content={tierContent} />

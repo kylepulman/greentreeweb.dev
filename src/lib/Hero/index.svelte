@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Icon } from '$lib/_Icon';
 	import type { HeroOptions, HeroShape } from '.';
 
 	export let content: HeroShape = {
@@ -57,10 +58,10 @@
 	};
 </script>
 
-<section class="page flex flex-col gap-8 md:flex-row md:gap-4 lg:gap-8" class:flex-col-reverse={options.isColReverse} class:md:flex-row-reverse={options.isRowReverse}>
+<section class="page flex flex-col gap-8 lg:flex-row lg:gap-4 xl:gap-8" class:flex-col-reverse={options.isColReverse} class:lg:flex-row-reverse={options.isRowReverse}>
 	<article class="flex-1 space-y-4 self-center" class:flex-2={options.grow === 'article'}>
 		{#if content.article.subheading}
-			<h3 class="text-primary-200">{content.article.subheading}</h3>
+			<h3 class="text-primary-700-200-token">{content.article.subheading}</h3>
 		{/if}
 		<h2 class="h1">{content.article.heading}</h2>
 		{#if content.article.detail}
@@ -73,13 +74,15 @@
 				{#each content.article.list as item}
 					<li>
 						<span>
-							<img class="h-12 max-h-12 min-h-12 w-12 min-w-12 max-w-12" src="/favicon.svg" alt="A list item." width="48" height="48" />
+							<Icon />
 						</span>
 						<span>
 							{#if item.heading}
 								<h4 class="h4">{item.heading}</h4>
 							{/if}
-							<p>{item.detail}</p>
+							{#if item.detail}
+								<p>{item.detail}</p>
+							{/if}
 						</span>
 					</li>
 				{/each}
@@ -94,10 +97,10 @@
 		</nav>
 	</article>
 	<div class="relative flex-1" class:self-center={options.isCover === false} class:flex-2={options.grow === 'figure'}>
-		<figure class="relative" class:h-full={options.isCover}>
+		<figure class="relative flex items-center justify-center" class:h-full={options.isCover}>
 			<img class="object-cover" class:rounded-full={options.isRounded} class:h-full={options.isCover} src={content.figure.source} alt={content.figure.alternativeText} width={content.figure.width} height={content.figure.height} />
 			{#if content.figure.figcaption}
-				<figcaption class="bg-surface-backdrop-token absolute bottom-0 p-1">
+				<figcaption class="bg-surface-backdrop-token absolute bottom-0 left-0 p-1">
 					<h5 class="h5">{content.figure.figcaption.heading}</h5>
 					<p>{content.figure.figcaption.detail}</p>
 				</figcaption>

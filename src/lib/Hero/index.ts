@@ -13,7 +13,7 @@ export type HeroShape = {
 		subheading?: string;
 		heading: string;
 		detail?: string[];
-		list?: { heading?: string; detail: string }[];
+		list?: { heading?: string; detail?: string }[];
 		callsToAction: { label: string; action: string }[];
 	};
 	figure: {

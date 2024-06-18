@@ -45,7 +45,9 @@
 		pageTitle: $page.url.pathname !== '/' ? $page.data.page.title : undefined
 	}}
 />
-<main class="my-4 flex-1 space-y-16">
+
+<main class="flex-1">
 	<slot />
 </main>
+
 <Footer content={data.global} />

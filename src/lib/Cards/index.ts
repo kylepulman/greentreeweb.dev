@@ -14,7 +14,7 @@ export type CardShape = {
 		};
 		heading: string;
 		detail?: string[];
-		list?: { heading?: string; detail: string }[];
+		list?: { heading?: string; detail?: string }[];
 		callsToAction?: { label: string; action: string }[];
 	}[];
 };
@@ -22,13 +22,7 @@ export type CardShape = {
 export const cardDefaultContent = {
 	header: {
 		heading: 'What We Do',
-		detail: ['We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.'],
-		image: {
-			source: '/favicon.svg',
-			alternativeText: 'A header decoration.',
-			width: 48,
-			height: 48
-		}
+		detail: ['We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.']
 	},
 	articles: [
 		{

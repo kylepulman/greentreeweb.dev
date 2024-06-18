@@ -1,30 +1,21 @@
 <script lang="ts">
-	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { page } from '$app/stores';
+	import { contactDefaultContent } from '$lib/Contact';
+	import { Chips } from '$lib/_Chips';
 	import type { FooterShape } from '.';
 
 	export let content: FooterShape;
 </script>
 
-<footer class="page my-8 space-y-4 px-4">
-	<div class="flex flex-col gap-4 md:flex-row">
-		<div class="flex flex-1 flex-col items-center space-y-2 text-center md:items-start md:text-left">
-			<h3 class="h2">{content.title}</h3>
-			<p>{content.email}</p>
-			<p>{content.phone}</p>
-			<LightSwitch />
-		</div>
-		<nav class="card list-nav mx-auto w-full space-y-2 p-4 sm:min-w-60 sm:max-w-60">
-			<h3 class="h3">{content.navigation.header.heading}</h3>
-			<ul>
-				{#each content.navigation.items as location}
-					<li>
-						<a href={location.action}>
-							<span><img src="/favicon.svg" alt="A list item." width="16" height="16" /></span>
-							<span class="flex-auto">{location.label}</span>
-						</a>
-					</li>
-				{/each}
-			</ul>
+<footer class="mx-auto my-8 w-full max-w-screen-xl space-y-4 px-4 lg:px-8">
+	<div class="flex flex-col items-center gap-4">
+		<Chips content={contactDefaultContent.chips} />
+		<nav class="flex max-w-screen-md flex-wrap justify-center gap-2 p-2">
+			{#each content.navigation.items as location}
+				<a class="variant-soft-surface btn block w-24 rounded p-2 text-center hover:variant-soft-primary" class:!variant-filled-primary={$page.url.pathname === location.action} href={location.action}>
+					{location.label}
+				</a>
+			{/each}
 		</nav>
 	</div>
 	<div class="text-center">

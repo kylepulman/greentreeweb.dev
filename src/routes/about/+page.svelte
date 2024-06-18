@@ -5,6 +5,7 @@
 </script>
 
 <Hero
+	options={{ isCover: true, grow: 'article' }}
 	content={{
 		article: {
 			subheading: 'Greentree Web Development',

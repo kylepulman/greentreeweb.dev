@@ -3,9 +3,6 @@ export type FooterShape = {
 	email: string;
 	phone: string;
 	navigation: {
-		header: {
-			heading: string;
-		};
 		items: {
 			label: string;
 			action: string;

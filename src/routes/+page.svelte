@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
 	import { Hero } from '$lib/Hero';
+	import tierContent from './_components/tierContent';
 </script>
 
 <Hero
@@ -23,13 +24,7 @@
 	content={{
 		header: {
 			heading: 'What We Do',
-			detail: ['We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.'],
-			image: {
-				source: '/favicon.svg',
-				alternativeText: 'A header decoration.',
-				width: 48,
-				height: 48
-			}
+			detail: ['We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.']
 		},
 		articles: [
 			{
@@ -102,145 +97,4 @@
 	}}
 />
 
-<Cards
-	content={{
-		header: {
-			heading: 'Our Blog',
-			image: {
-				source: '/favicon.svg',
-				alternativeText: 'Decoration',
-				width: 48,
-				height: 48
-			}
-		},
-		articles: [
-			{
-				heading: 'Are hand coded websites better than WordPress?',
-				detail: ['Learn the differences in speed and security between the two.'],
-				image: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Read More',
-						action: '#read-more'
-					}
-				]
-			},
-			{
-				heading: 'How to add Dark Mode to a custom website',
-				detail: ['Learn how I create Dark Mode and why it matters for your site.'],
-				image: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Read More',
-						action: '#read-more'
-					}
-				]
-			},
-			{
-				heading: 'How to build responsive websites from scratch',
-				detail: ['I talk about how I start each website to make it responsive.'],
-				image: {
-					source: 'https://picsum.photos/400/200',
-					alternativeText: 'Decoration',
-					width: 400,
-					height: 200
-				},
-				callsToAction: [
-					{
-						label: 'Read More',
-						action: '#read-more'
-					}
-				]
-			}
-		]
-	}}
-/>
-
-<Cards
-	content={{
-		articles: [
-			{
-				subheading: 'Standard',
-				heading: '$150/mo',
-				list: [
-					{
-						detail: 'Unlimited edits'
-					},
-					{
-						detail: 'Includes hosting'
-					},
-					{
-						detail: '24/7 customer service'
-					},
-					{
-						detail: 'Lifetime updates'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				subheading: 'E-Commerce',
-				heading: '$8K',
-				list: [
-					{
-						detail: '$8000 min up front cost'
-					},
-					{
-						detail: 'Custom designed'
-					},
-					{
-						detail: 'Custom coded Shopify integration'
-					},
-					{
-						detail: 'Easy to edit'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			},
-			{
-				subheading: 'Logos & Graphic Design',
-				heading: '$0',
-				list: [
-					{
-						detail: '2 revisions'
-					},
-					{
-						detail: 'All file formats'
-					},
-					{
-						detail: 'Ready to use'
-					},
-					{
-						detail: 'FREE with subscription'
-					}
-				],
-				callsToAction: [
-					{
-						label: 'Contact Us',
-						action: 'tel:9103867339'
-					}
-				]
-			}
-		]
-	}}
-/>
+<Cards content={tierContent} />

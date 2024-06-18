@@ -1,13 +1,11 @@
 import type { BlockHeaderShape } from '$lib/_BlockHeader';
+import type { ChipsShape } from '$lib/_Chips';
 
 export { default as Contact } from './index.svelte';
 
 export type ContactShape = {
 	header?: BlockHeaderShape;
-	chips: {
-		action: string;
-		label: string;
-	}[];
+	chips: ChipsShape;
 	form: {
 		input: {
 			[Property in 'name' | 'email' | 'message']: {
@@ -27,29 +25,28 @@ export type ContactShape = {
 export const contactDefaultContent: ContactShape = {
 	header: {
 		heading: 'Drop Us a Line',
-		image: {
-			source: '/favicon.svg',
-			alternativeText: 'A header decoration.',
-			width: 48,
-			height: 48
-		}
+		image: true
 	},
 	chips: [
 		{
 			label: '910-386-7339',
-			action: 'tel:9103867339'
+			action: `tel:910-386-7339`,
+			icon: { source: 'Phone' }
 		},
 		{
 			label: 'kyle@greentreeweb.dev',
-			action: 'mailto:kyle@greentreeweb.dev'
+			action: `mailto:kyle@greentreeweb.dev`,
+			icon: { source: 'Email' }
 		},
 		{
 			label: 'Twitter',
-			action: '#'
+			action: '#',
+			icon: { source: 'Social' }
 		},
 		{
 			label: 'YouTube',
-			action: '#'
+			action: '#',
+			icon: { source: 'Video' }
 		}
 	],
 	form: {

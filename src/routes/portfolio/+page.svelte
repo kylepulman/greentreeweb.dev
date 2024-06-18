@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Cards } from '$lib/Cards';
-	import portfolioContent from '$lib/content/portfolioContent';
+
+	export let data;
 </script>
 
-<Cards content={portfolioContent} />
+<Cards content={data.cardsOne} />

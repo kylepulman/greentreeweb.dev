@@ -1,12 +1,8 @@
 import { handleFormInput } from '$lib';
+import contactContent from './contact.content.js';
 
 export const load = () => {
-	return {
-		page: {
-			title: 'Contact Us',
-			description: 'Description for Contact page.'
-		}
-	};
+	return contactContent;
 };
 
 export const actions = {

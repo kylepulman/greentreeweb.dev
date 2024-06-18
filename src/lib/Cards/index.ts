@@ -3,7 +3,7 @@ import type { ArticleShape } from '$lib/types';
 
 export { default as Cards } from './index.svelte';
 
-export type CardShape = {
+export type CardsShape = {
 	header?: BlockHeaderShape;
 	articles: ArticleShape[];
 };

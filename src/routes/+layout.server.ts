@@ -1,4 +1,4 @@
-import globalContent from '$lib/content/globalContent';
+import globalContent from '$lib/globalContent';
 
 export const load = async () => {
 	return {

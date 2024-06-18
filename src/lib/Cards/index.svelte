@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { BlockHeader } from '$lib/_BlockHeader';
 	import { Icon } from '$lib/_Icon';
-	import { type CardShape } from '.';
+	import { type CardsShape } from '.';
 
-	export let content: CardShape;
+	export let content: CardsShape;
 </script>
 
 <section class="page space-y-8">

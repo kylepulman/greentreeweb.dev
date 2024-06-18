@@ -16,7 +16,6 @@
 	{/if}
 	<div class="flex flex-2 flex-col items-start gap-4 md:flex-row">
 		<Chips content={content.chips} />
-
 		<form
 			class="card variant-ghost-surface w-full flex-1 space-y-4 p-4"
 			method="post"

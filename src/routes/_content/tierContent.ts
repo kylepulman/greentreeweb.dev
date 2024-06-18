@@ -1,5 +1,5 @@
-import type { CardShape } from '$lib/Cards';
-import globalContent from './globalContent';
+import type { CardsShape } from '$lib/Cards';
+import globalContent from '$lib/globalContent';
 
 export default {
 	header: {
@@ -80,4 +80,4 @@ export default {
 			]
 		}
 	]
-} satisfies CardShape;
+} satisfies CardsShape;

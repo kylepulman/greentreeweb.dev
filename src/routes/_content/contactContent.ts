@@ -1,5 +1,5 @@
 import type { ContactShape } from '$lib/Contact';
-import globalContent from './globalContent';
+import globalContent from '$lib/globalContent';
 
 export default {
 	blockHeader: {

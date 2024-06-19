@@ -12,9 +12,9 @@ export default {
 	},
 	heroOne: {
 		article: {
-			heading: 'Websites that help businesses thrive.',
-			detail: ['A no-nonsense website solution so you can get back to running your business.'],
-			callsToAction: [{ label: 'Get in Touch', action: '/contact' }]
+			heading: 'A no-nonsense web solution that helps businesses thrive.',
+			detail: ["Hi, I'm Kyle. I'm a developer and the sole proprietor of Greentree Web Development.", "I've seen plenty of website solutions, but none seem to tackle the core issue."],
+			callsToAction: [{ label: 'Get Started', action: '/contact' }]
 		},
 		figure: {
 			source: 'https://picsum.photos/id/701/900/500',
@@ -25,24 +25,24 @@ export default {
 	},
 	cardsOne: {
 		header: {
-			heading: 'What We Do',
-			detail: ['We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.']
+			heading: 'Here For You',
+			icon: '/favicon.svg',
+			detail: ['We specialize in website development for home and outdoors service businesses, including roofers, landscapers, painters, and more.']
 		},
 		articles: [
 			{
-				heading: 'Mobile-first Design',
-				detail: ['We start building your site for mobile devices first, then we add on to it to make tablet and desktop.'],
-
+				icon: globalContent.icon,
+				heading: 'Here For You',
+				detail: ['We specialize in business website development for roofers, landscapers, painters, and more.']
+			},
+			{
+				heading: 'Get More Leads',
+				detail: ['A website that is designed from its foundation'],
 				icon: globalContent.icon
 			},
 			{
-				heading: 'Fully Responsive',
-				detail: ['Your website will fit all mobile screens sizes, tablets, and desktop sizes so new clients can access your site from anywhere.'],
-				icon: globalContent.icon
-			},
-			{
-				heading: 'Optimization',
-				detail: ['60% of all internet traffic is on mobile devices, so we optimize your mobile to perform their best in search engines.'],
+				heading: 'Rest Assured',
+				detail: ["We'll work hard to turn your website into one of your business's greatest assets."],
 				icon: globalContent.icon
 			}
 		]
@@ -50,37 +50,29 @@ export default {
 	heroTwo: {
 		article: {
 			subheading: 'No-nonsense contract',
-			heading: '$0 Down, $150 Per Month,\n12 Month Minimum Contract',
-			detail: ['$0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved.', 'You own your domain, content, listing, and profiles. Cancel anytime with no fees or hassle.'],
+			heading: 'A managed web solution for $200 per month.',
+			detail: ["We're not just selling a website. Pay month-to-month with no commitment. Bring a domain name and content, and we'll handle the rest."],
 			list: [
 				{
-					heading: 'Hosting Fees Included',
-					detail: 'Hosting fees are built right into the monthly payment.'
+					heading: 'Get a website up-and-running today.',
+					detail: "When you're ready to see what a managed web solution can do for your business, subscribe for $200 per month."
 				},
 				{
-					heading: 'Unlimited Edits',
-					detail: 'Change anything you want at anytime and it will be done that day.'
+					heading: 'No hidden fees or surprises.',
+					detail: 'A no-nonsense website solution for no-nonsense businesses.'
 				},
 				{
-					heading: '24/7 Customer Service',
-					detail: 'Call direct anytime day or night, no phone trees or automated responses.'
+					heading: 'Your new favorite employee.',
+					detail: "Once it's online, we'll continue to tune your website so that it continues to produce the best results possible."
 				},
 				{
-					heading: 'Web Design & Development',
-					detail: 'Includes over 40 hours of design, development, and testing.'
-				},
-				{
-					heading: '100 Google Page Speed Score',
-					detail: 'We can achieve a perfect 100 on Google Page Speed scores and boost your search ranking.'
-				},
-				{
-					heading: 'Google Analytics',
-					detail: 'We install Analytics for free to monitor traffic and where it comes from.'
+					heading: 'Direct support.',
+					detail: "We'll be there to answer any question and address problems before they become problems."
 				}
 			],
 			callsToAction: [
-				{ label: 'Call Us', action: 'tel:3867339' },
-				{ label: 'Learn More', action: '#' }
+				{ label: 'Schedule a Call', action: '/contact' },
+				{ label: 'See our Work', action: '/portfolio' }
 			]
 		},
 		figure: {
@@ -97,12 +89,12 @@ export default {
 	cardsTwo: portfolioContent,
 	heroThree: {
 		article: {
-			heading: 'Who We Are',
-			detail: ['My name is Ryan, I am a stay at home dad and web developer. I started this business to help provide for the family while still being able to be home and raise the kids. I spent a year and a half teaching myself the right way to make websites and learning to write the code myself. Now after being in business professionally for over 5 years I have built hundreds websites and have my method down to a science.'],
+			heading: "Hello, I'm Kyle!",
+			detail: ["I'm a developer from Wilmington, North Carolina. Greentree Web Development is solely owned and operated by me. I believe that businesses shouldn't have to settle for limited page builders or costly agencies, so I've made it my goal to provide a no-nonsense solution that produces tangible results. I'm ready to get to work, let's start a project!"],
 			callsToAction: [
 				{
-					label: 'Learn More',
-					action: '/about'
+					label: 'Schedule a Call',
+					action: '/contact'
 				}
 			]
 		},
